@@ -439,3 +439,14 @@ font-size:34px;
 }
 
 }
+
+.lights{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:url("images/lights.png") top center/cover no-repeat;
+    pointer-events:none;
+    z-index:-1;
+}
