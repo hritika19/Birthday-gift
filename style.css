@@ -15,9 +15,37 @@ html{
 }
 
 body{
-    background:#faf7f2;
+    background: linear-gradient(180deg,#fcfaf5,#f8f5ee,#faf7f2);
     color:#3d3d3d;
     overflow-x:hidden;
+    position:relative;
+}
+
+/* Decorative background for entire website */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(182,209,170,.35) 0 120px, transparent 130px),
+        radial-gradient(circle at 95% 8%, rgba(197,214,183,.35) 0 150px, transparent 160px),
+        radial-gradient(circle at 0% 100%, rgba(255,220,225,.45) 0 180px, transparent 190px),
+        radial-gradient(circle at 100% 100%, rgba(197,214,183,.30) 0 170px, transparent 180px),
+        linear-gradient(180deg,#fcfaf5,#f8f5ee,#faf7f2);
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    opacity:.15;
+    background-image:
+      radial-gradient(#d7b26d 1.5px, transparent 1.5px),
+      radial-gradient(#efb6c1 2px, transparent 2px);
+    background-size:110px 110px;
 }
 
 /* Floating Hearts Background */
@@ -50,7 +78,9 @@ body{
     width:90%;
     max-width:420px;
 
-    background:white;
+    background:rgba(255,255,255,.82);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
 
     padding:35px;
 
@@ -244,7 +274,9 @@ section h2{
 
     margin:auto;
 
-    background:white;
+    background:rgba(255,255,255,.82);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
 
     border-radius:25px;
 
@@ -312,7 +344,9 @@ margin:auto;
 
 .loveCards div{
 
-background:white;
+background:rgba(255,255,255,.82);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
 
 padding:25px;
 
@@ -340,7 +374,9 @@ max-width:650px;
 
 margin:auto;
 
-background:white;
+background:rgba(255,255,255,.82);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
 
 padding:30px;
 
@@ -449,4 +485,22 @@ font-size:34px;
     background:url("images/lights.png") top center/cover no-repeat;
     pointer-events:none;
     z-index:-1;
+}
+
+.leaf{
+    position:fixed;
+    width:180px;
+    opacity:.35;
+    z-index:-1;
+}
+
+.left{
+    top:0;
+    left:0;
+}
+
+.right{
+    bottom:0;
+    right:0;
+    transform:rotate(180deg);
 }
